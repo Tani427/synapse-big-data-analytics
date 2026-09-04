@@ -1,0 +1,59 @@
+🚀 STARTING ENHANCED BUSINESS ANALYSIS (FIXED)
+Data folder: data/processed
+Output folder: data/processed/analysis_results
+======================================================================
+✅ Loaded sales.csv: 100 rows, 14 columns
+✅ Loaded order_dataset.csv: 70051 rows, 17 columns
+✅ Loaded customers.csv: 793 rows, 5 columns
+✅ Loaded shipping.csv: 10999 rows, 12 columns
+✅ Loaded Stores.csv: 118 rows, 7 columns
+
+======================================================================
+💰 SALES KPIs
+======================================================================
+Total Revenue   : 137,348,768.31
+Total Cost      : 19,104.80
+Total Profit    : 44,168,198.40
+Total Units Sold: 512,871
+Profit Margin   : 32.16%
+
+======================================================================
+🧾 ORDER ANALYSIS
+======================================================================
+Total Transactions: 70,051
+Total Order Revenue: 4,327,474.33
+Average Order Value: 61.78
+Refunded Transactions: -717,756.33
+Refund Rate: -1024.62%
+
+======================================================================
+👥 CUSTOMER ANALYSIS
+======================================================================
+Total Customers: 793
+✅ Detected segment column: 'segment'
+⚠️  Segment column is empty – skipping segment plots.
+ℹ️  No age column or data – skipping age distribution.
+ℹ️  No gender column – skipping gender analysis.
+
+======================================================================
+🚚 SHIPPING PERFORMANCE
+======================================================================
+On-Time Delivery: 59.67%
+Late Delivery   : 40.33%
+   📊 Saved plot: data/processed/analysis_results\on_time_delivery.png
+
+Average Customer Rating: 2.99 / 5
+   📊 Saved plot: data/processed/analysis_results\customer_rating.png
+Average Discount Offered: 13.37
+Total Shipping Cost: 2,311,955.00
+Average Shipping Cost: 210.20
+
+======================================================================
+🏪 STORE ANALYSIS
+======================================================================
+Total Stores: 118
+
+======================================================================
+✅ BUSINESS ANALYSIS COMPLETED SUCCESSFULLY
+📁 All results saved in: data/processed/analysis_results
+📄 Log file: data/processed/analysis_results\business_analysis_log.txt

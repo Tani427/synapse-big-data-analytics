@@ -1,0 +1,258 @@
+🚀 STARTING ENHANCED EDA
+Data folder: data/processed
+Output folder: images/eda
+======================================================================
+✅ Loaded sales.csv: 100 rows, 14 columns
+✅ Loaded customers.csv: 793 rows, 5 columns
+✅ Loaded PoductDemand.csv: 150150 rows, 5 columns
+✅ Loaded Stores.csv: 118 rows, 7 columns
+✅ Loaded order_dataset.csv: 70051 rows, 17 columns
+✅ Loaded shipping.csv: 10999 rows, 12 columns
+
+--- sales Basic Info ---
+Shape: (100, 14)
+Columns: ['Region', 'Country', 'Item Type', 'Sales Channel', 'Order Priority', 'Order Date', 'Order ID', 'Ship Date', 'Units Sold', 'Unit Price', 'Unit Cost', 'Total Revenue', 'Total Cost', 'Total Profit']
+Data types:
+Region            float64
+Country           float64
+Item Type         float64
+Sales Channel     float64
+Order Priority    float64
+Order Date            str
+Order ID            int64
+Ship Date             str
+Units Sold          int64
+Unit Price        float64
+Unit Cost         float64
+Total Revenue     float64
+Total Cost        float64
+Total Profit      float64
+Missing values:
+Region            100
+Country           100
+Item Type         100
+Sales Channel     100
+Order Priority    100
+Memory usage: 0.02 MB
+
+Numeric summary:
+                count          mean           std           min           25%           50%           75%           max      skew  kurtosis
+Region            0.0           NaN           NaN           NaN           NaN           NaN           NaN           NaN       NaN       NaN
+Country           0.0           NaN           NaN           NaN           NaN           NaN           NaN           NaN       NaN       NaN
+Item Type         0.0           NaN           NaN           NaN           NaN           NaN           NaN           NaN       NaN       NaN
+Sales Channel     0.0           NaN           NaN           NaN           NaN           NaN           NaN           NaN       NaN       NaN
+Order Priority    0.0           NaN           NaN           NaN           NaN           NaN           NaN           NaN       NaN       NaN
+Order ID        100.0  5.550204e+08  2.606153e+08  1.146066e+08  3.389225e+08  5.577086e+08  7.907551e+08  9.940222e+08 -0.098354 -1.203206
+Units Sold      100.0  5.128710e+03  2.794485e+03  1.240000e+02  2.836250e+03  5.382500e+03  7.369000e+03  9.925000e+03 -0.099953 -1.070528
+Unit Price      100.0  2.767613e+02  2.355922e+02  9.330000e+00  8.173000e+01  1.798800e+02  4.372000e+02  6.682700e+02  0.620751 -1.152369
+Unit Cost       100.0  1.910480e+02  1.882082e+02  6.920000e+00  3.584000e+01  1.072750e+02  2.633300e+02  5.249600e+02  0.858072 -0.830099
+Total Revenue   100.0  1.373488e+06  1.460029e+06  4.870260e+03  2.687212e+05  7.523144e+05  2.212045e+06  5.997055e+06  1.277698  0.804539
+Total Cost      100.0  9.318057e+05  1.083938e+06  3.612240e+03  1.688680e+05  3.635664e+05  1.613870e+06  4.509794e+06  1.460512  1.529171
+Total Profit    100.0  4.416820e+05  4.385379e+05  1.258020e+03  1.214436e+05  2.907680e+05  6.358288e+05  1.719922e+06  1.238555  0.767398
+💾 Summary saved to: images/eda\sales\sales_summary.csv
+
+Total Revenue: 137,348,768.31
+Total Cost: 19,104.80
+Total Profit: 44,168,198.40
+Total Units Sold: 512,871
+⚠️  Column 'Region' is entirely NaN – skipping plot.
+⚠️  Column 'Region' is entirely NaN – skipping plot.
+⚠️  Column 'Item Type' is entirely NaN – skipping plot.
+   📊 Saved plot: images/eda\sales\dist_Order ID.png
+   📊 Saved plot: images/eda\sales\dist_Units Sold.png
+   📊 Saved plot: images/eda\sales\dist_Unit Price.png
+   📊 Saved plot: images/eda\sales\dist_Unit Cost.png
+   📊 Saved plot: images/eda\sales\dist_Total Revenue.png
+   📊 Saved plot: images/eda\sales\dist_Total Cost.png
+   📊 Saved plot: images/eda\sales\dist_Total Profit.png
+   📊 Saved plot: images/eda\sales\correlation_heatmap.png
+
+--- customers Basic Info ---
+Shape: (793, 5)
+Columns: ['id', 'name', 'segment', 'state', 'city']
+Data types:
+id         float64
+name       float64
+segment    float64
+state      float64
+city       float64
+Missing values:
+id         793
+name       793
+segment    793
+state      793
+city       793
+Memory usage: 0.03 MB
+
+Numeric summary:
+         count  mean  std  min  25%  50%  75%  max  skew  kurtosis
+id         0.0   NaN  NaN  NaN  NaN  NaN  NaN  NaN   NaN       NaN
+name       0.0   NaN  NaN  NaN  NaN  NaN  NaN  NaN   NaN       NaN
+segment    0.0   NaN  NaN  NaN  NaN  NaN  NaN  NaN   NaN       NaN
+state      0.0   NaN  NaN  NaN  NaN  NaN  NaN  NaN   NaN       NaN
+city       0.0   NaN  NaN  NaN  NaN  NaN  NaN  NaN   NaN       NaN
+💾 Summary saved to: images/eda\customers\customers_summary.csv
+
+--- products Basic Info ---
+Shape: (150150, 5)
+Columns: ['ID', 'Store ID', 'Total Price', 'Base Price', 'Units Sold']
+Data types:
+ID               int64
+Store ID         int64
+Total Price    float64
+Base Price     float64
+Units Sold       int64
+Missing values:
+Total Price    1
+Memory usage: 5.73 MB
+
+Numeric summary:
+                count           mean           std       min         25%          50%          75%          max      skew   kurtosis
+ID           150150.0  106271.555504  61386.037861     1.000  53111.2500  106226.5000  159452.7500  212644.0000  0.001126  -1.200369
+Store ID     150150.0    9199.422511    615.591445  8023.000   8562.0000    9371.0000    9731.0000    9984.0000 -0.636176  -0.927541
+Total Price  150149.0     206.626751    103.308516    41.325    130.3875     198.0750     233.7000     562.1625  1.250565   1.238268
+Base Price   150150.0     219.425927    110.961712    61.275    133.2375     205.9125     234.4125     562.1625  1.208992   0.867837
+Units Sold   150150.0      51.674206     60.207904     1.000     20.0000      35.0000      62.0000    2876.0000  6.114996  93.686253
+💾 Summary saved to: images/eda\products\products_summary.csv
+   📊 Saved plot: images/eda\products\dist_ID.png
+   📊 Saved plot: images/eda\products\dist_Store ID.png
+   📊 Saved plot: images/eda\products\dist_Total Price.png
+   📊 Saved plot: images/eda\products\dist_Base Price.png
+   📊 Saved plot: images/eda\products\dist_Units Sold.png
+
+--- stores Basic Info ---
+Shape: (118, 7)
+Columns: ['Store Number', 'AreaStore', 'Property', 'Type', 'Old/New', 'Checkout Number', 'Revenue']
+Data types:
+Store Number         int64
+AreaStore          float64
+Property           float64
+Type               float64
+Old/New            float64
+Checkout Number    float64
+Revenue                str
+Missing values:
+Property           118
+Type               118
+Old/New            118
+Checkout Number     12
+Revenue             79
+Memory usage: 0.01 MB
+
+Numeric summary:
+                 count         mean          std   min     25%     50%      75%     max      skew  kurtosis
+Store Number     118.0    59.500000    34.207699   1.0   30.25    59.5    88.75   118.0  0.000000 -1.200000
+AreaStore        118.0  1373.608136  1092.453470  82.0  530.50  1000.0  1887.50  5600.0  1.560814  2.521391
+Property           0.0          NaN          NaN   NaN     NaN     NaN      NaN     NaN       NaN       NaN
+Type               0.0          NaN          NaN   NaN     NaN     NaN      NaN     NaN       NaN       NaN
+Old/New            0.0          NaN          NaN   NaN     NaN     NaN      NaN     NaN       NaN       NaN
+Checkout Number  106.0     4.792453     2.820729   1.0    3.00     4.0     6.00    14.0  1.259098  1.219605
+💾 Summary saved to: images/eda\stores\stores_summary.csv
+   📊 Saved plot: images/eda\stores\dist_Store Number.png
+   📊 Saved plot: images/eda\stores\dist_AreaStore.png
+   📊 Saved plot: images/eda\stores\dist_Checkout Number.png
+
+--- orders Basic Info ---
+Shape: (70051, 17)
+Columns: ['Item Name', 'Category', 'Version', 'Item Code', 'Item ID', 'Buyer ID', 'Transaction ID', 'Date', 'Final Quantity', 'Total Revenue', 'Price Reductions', 'Refunds', 'Final Revenue', 'Sales Tax', 'Overall Revenue', 'Refunded Item Count', 'Purchased Item Count']
+Data types:
+Item Name                   str
+Category                    str
+Version                 float64
+Item Code                   str
+Item ID                 float64
+Buyer ID                float64
+Transaction ID          float64
+Date                        str
+Final Quantity            int64
+Total Revenue           float64
+Price Reductions        float64
+Refunds                 float64
+Final Revenue           float64
+Sales Tax               float64
+Overall Revenue         float64
+Refunded Item Count       int64
+Purchased Item Count      int64
+Missing values:
+Version    69785
+Memory usage: 23.11 MB
+
+Numeric summary:
+                        count          mean           std           min           25%           50%           75%           max       skew    kurtosis
+Version                 266.0  9.836842e+01  1.612450e+01  8.900000e+01  8.900000e+01  1.000000e+02  1.000000e+02  1.780000e+02   3.477168   13.797425
+Item ID               70051.0  2.442353e+11  4.255107e+12  1.001447e+07  2.692223e+07  4.494514e+07  7.743106e+07  8.422210e+13  19.200206  374.254459
+Buyer ID              70051.0  6.013177e+11  6.223245e+12  1.000661e+06  3.295585e+06  5.566107e+06  7.815352e+06  9.977410e+13  11.544054  140.632855
+Transaction ID        70051.0  5.506035e+13  2.587637e+13  1.000660e+13  3.270320e+13  5.522210e+13  7.736870e+13  9.999550e+13  -0.006158   -1.189447
+Final Quantity        70051.0  7.011749e-01  7.395013e-01 -3.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  6.000000e+00  -1.809597    1.893628
+Total Revenue         70051.0  6.177605e+01  3.180085e+01  0.000000e+00  5.167000e+01  7.417000e+01  7.917000e+01  4.450000e+02  -0.576078    1.389075
+Price Reductions      70051.0 -4.949677e+00  7.769795e+00 -2.000000e+02 -8.340000e+00  0.000000e+00  0.000000e+00  0.000000e+00  -2.319415   21.168839
+Refunds               70051.0 -1.024620e+01  2.515483e+01 -2.375000e+02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  -2.325132    4.585626
+Final Revenue         70051.0  4.658018e+01  5.180304e+01 -2.375000e+02  4.708000e+01  6.333000e+01  7.417000e+01  4.450000e+02  -1.494519    1.614008
+Sales Tax             70051.0  9.123600e+00  1.030531e+01 -4.750000e+01  8.370000e+00  1.266000e+01  1.484000e+01  6.334000e+01  -1.477356    1.444031
+Overall Revenue       70051.0  5.570378e+01  6.192098e+01 -2.850000e+02  5.622500e+01  7.600000e+01  8.900000e+01  4.450000e+02  -1.511174    1.582603
+Refunded Item Count   70051.0 -1.561006e-01  3.691927e-01 -3.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  -2.044042    2.783635
+Purchased Item Count  70051.0  8.572754e-01  3.808222e-01  0.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  6.000000e+00  -1.253789    3.384727
+💾 Summary saved to: images/eda\orders\orders_summary.csv
+   📊 Saved plot: images/eda\orders\correlation_heatmap.png
+
+--- shipping Basic Info ---
+Shape: (10999, 12)
+Columns: ['ID', 'Warehouse_block', 'Mode_of_Shipment', 'Customer_care_calls', 'Customer_rating', 'Cost_of_the_Product', 'Prior_purchases', 'Product_importance', 'Gender', 'Discount_offered', 'Weight_in_gms', 'Reached.on.Time_Y.N']
+Data types:
+ID                       int64
+Warehouse_block        float64
+Mode_of_Shipment       float64
+Customer_care_calls      int64
+Customer_rating          int64
+Cost_of_the_Product      int64
+Prior_purchases          int64
+Product_importance     float64
+Gender                 float64
+Discount_offered         int64
+Weight_in_gms            int64
+Reached.on.Time_Y.N      int64
+Missing values:
+Warehouse_block       10999
+Mode_of_Shipment      10999
+Product_importance    10999
+Gender                10999
+Memory usage: 1.01 MB
+
+Numeric summary:
+                       count         mean          std     min     25%     50%     75%      max      skew  kurtosis
+ID                   10999.0  5500.000000  3175.282140     1.0  2750.5  5500.0  8249.5  10999.0  0.000000 -1.200000
+Warehouse_block          0.0          NaN          NaN     NaN     NaN     NaN     NaN      NaN       NaN       NaN
+Mode_of_Shipment         0.0          NaN          NaN     NaN     NaN     NaN     NaN      NaN       NaN       NaN
+Customer_care_calls  10999.0     4.054459     1.141490     2.0     3.0     4.0     5.0      7.0  0.391926 -0.308995
+Customer_rating      10999.0     2.990545     1.413603     1.0     2.0     3.0     4.0      5.0  0.004360 -1.295654
+Cost_of_the_Product  10999.0   210.196836    48.063272    96.0   169.0   214.0   251.0    310.0 -0.157117 -0.972160
+Prior_purchases      10999.0     3.567597     1.522860     2.0     3.0     3.0     4.0     10.0  1.681897  4.006342
+Product_importance       0.0          NaN          NaN     NaN     NaN     NaN     NaN      NaN       NaN       NaN
+Gender                   0.0          NaN          NaN     NaN     NaN     NaN     NaN      NaN       NaN       NaN
+Discount_offered     10999.0    13.373216    16.205527     1.0     4.0     7.0    10.0     65.0  1.798929  2.000586
+Weight_in_gms        10999.0  3634.016729  1635.377251  1001.0  1839.5  4149.0  5050.0   7846.0 -0.249747 -1.447671
+Reached.on.Time_Y.N  10999.0     0.596691     0.490584     0.0     0.0     1.0     1.0      1.0 -0.394257 -1.844897
+💾 Summary saved to: images/eda\shipping\shipping_summary.csv
+
+Delivery status:
+Reached.on.Time_Y.N
+1    6563
+0    4436
+Name: count, dtype: int64
+On‑time delivery percentage: 59.67%
+   📊 Saved plot: images/eda\shipping\on_time_delivery.png
+   📊 Saved plot: images/eda\shipping\customer_rating.png
+   📊 Saved plot: images/eda\shipping\dist_ID.png
+   📊 Saved plot: images/eda\shipping\dist_Customer_care_calls.png
+   📊 Saved plot: images/eda\shipping\dist_Customer_rating.png
+   📊 Saved plot: images/eda\shipping\dist_Cost_of_the_Product.png
+   📊 Saved plot: images/eda\shipping\dist_Prior_purchases.png
+   📊 Saved plot: images/eda\shipping\dist_Discount_offered.png
+   📊 Saved plot: images/eda\shipping\dist_Weight_in_gms.png
+   📊 Saved plot: images/eda\shipping\dist_Reached.on.Time_Y.N.png
+   📊 Saved plot: images/eda\shipping\correlation_heatmap.png
+
+======================================================================
+✅ EDA COMPLETED SUCCESSFULLY
+📁 All charts saved under: images/eda
+📄 Log file: images/eda\eda_log.txt

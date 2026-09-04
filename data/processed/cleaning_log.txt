@@ -1,0 +1,131 @@
+🚀 STARTING DATA CLEANING PIPELINE
+Input folder: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\sample
+Output folder: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed
+
+======================================================================
+CLEANING: sales.csv
+======================================================================
+✓ Loaded: 100 rows, 14 columns
+✓ No missing values found initially.
+✓ No duplicate rows found.
+✓ Stripped whitespace from column names.
+✓ Stripped whitespace from 7 text columns.
+   (detected day-first format for 'Region')
+   (detected day-first format for 'Country')
+   (detected day-first format for 'Item Type')
+   (detected day-first format for 'Sales Channel')
+   (detected day-first format for 'Order Priority')
+   (detected day-first format for 'Order Date')
+   (detected day-first format for 'Ship Date')
+✓ Converted to datetime: ['Region', 'Country', 'Item Type', 'Sales Channel', 'Order Priority', 'Order Date', 'Ship Date']
+⚠️  Remaining missing values:
+   - Region: 100 (100.00%)
+   - Country: 100 (100.00%)
+   - Item Type: 100 (100.00%)
+   - Sales Channel: 100 (100.00%)
+   - Order Priority: 100 (100.00%)
+✅ Cleaned shape: 100 rows, 14 columns
+✅ Saved to: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed\sales.csv
+
+======================================================================
+CLEANING: customers.csv
+======================================================================
+✓ Loaded: 793 rows, 5 columns
+✓ No missing values found initially.
+✓ No duplicate rows found.
+✓ Stripped whitespace from column names.
+✓ Stripped whitespace from 5 text columns.
+   (detected day-first format for 'id')
+   (detected day-first format for 'name')
+   (detected day-first format for 'segment')
+   (detected day-first format for 'state')
+   (detected day-first format for 'city')
+✓ Converted to datetime: ['id', 'name', 'segment', 'state', 'city']
+⚠️  Remaining missing values:
+   - id: 793 (100.00%)
+   - name: 793 (100.00%)
+   - segment: 793 (100.00%)
+   - state: 793 (100.00%)
+   - city: 793 (100.00%)
+✅ Cleaned shape: 793 rows, 5 columns
+✅ Saved to: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed\customers.csv
+
+======================================================================
+CLEANING: PoductDemand.csv
+======================================================================
+✓ Loaded: 150150 rows, 5 columns
+⚠️  Missing values before cleaning:
+   - Total Price: 1 (0.00%)
+✓ No duplicate rows found.
+✓ Stripped whitespace from column names.
+✓ Stripped whitespace from 0 text columns.
+⚠️  Remaining missing values:
+   - Total Price: 1 (0.00%)
+✅ Cleaned shape: 150150 rows, 5 columns
+✅ Saved to: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed\PoductDemand.csv
+
+======================================================================
+CLEANING: Stores.csv
+======================================================================
+✓ Loaded: 118 rows, 7 columns
+⚠️  Missing values before cleaning:
+   - Checkout Number: 12 (10.17%)
+✓ No duplicate rows found.
+✓ Stripped whitespace from column names.
+✓ Stripped whitespace from 4 text columns.
+   (detected day-first format for 'Property')
+   (detected day-first format for 'Type')
+   (detected day-first format for 'Old/New')
+   (detected day-first format for 'Revenue')
+✓ Converted to datetime: ['Property', 'Type', 'Old/New', 'Revenue']
+✓ Filled NaN in 'Checkout Number' with median (4.00)
+⚠️  Remaining missing values:
+   - Property: 118 (100.00%)
+   - Type: 118 (100.00%)
+   - Old/New: 118 (100.00%)
+   - Checkout Number: 12 (10.17%)
+   - Revenue: 79 (66.95%)
+✅ Cleaned shape: 118 rows, 7 columns
+✅ Saved to: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed\Stores.csv
+
+======================================================================
+CLEANING: order_dataset.csv
+======================================================================
+✓ Loaded: 70052 rows, 17 columns
+✓ No missing values found initially.
+✓ Removed duplicate rows: 1
+✓ Stripped whitespace from column names.
+✓ Stripped whitespace from 5 text columns.
+✓ Converted to datetime: ['Date']
+✓ Converted to numeric: ['Version']
+⚠️  Remaining missing values:
+   - Version: 69785 (99.62%)
+✅ Cleaned shape: 70051 rows, 17 columns
+✅ Saved to: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed\order_dataset.csv
+
+======================================================================
+CLEANING: shipping.csv
+======================================================================
+✓ Loaded: 10999 rows, 12 columns
+✓ No missing values found initially.
+✓ No duplicate rows found.
+✓ Stripped whitespace from column names.
+✓ Stripped whitespace from 4 text columns.
+   (detected day-first format for 'Warehouse_block')
+   (detected day-first format for 'Mode_of_Shipment')
+   (detected day-first format for 'Product_importance')
+   (detected day-first format for 'Gender')
+✓ Converted to datetime: ['Warehouse_block', 'Mode_of_Shipment', 'Product_importance', 'Gender']
+⚠️  Remaining missing values:
+   - Warehouse_block: 10999 (100.00%)
+   - Mode_of_Shipment: 10999 (100.00%)
+   - Product_importance: 10999 (100.00%)
+   - Gender: 10999 (100.00%)
+✅ Cleaned shape: 10999 rows, 12 columns
+✅ Saved to: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed\shipping.csv
+
+======================================================================
+✅ ALL DATASETS PROCESSED SUCCESSFULLY
+======================================================================
+📁 Check cleaned files in: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed
+📄 Detailed log saved to: C:\Users\TANISKA\synapse-big-data-analytics\python\..\data\processed\cleaning_log.txt
